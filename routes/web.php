@@ -14,11 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts/index');
+    return view('home');
 });
-Route::get('/nama', function () {
-    return ('Dita');
+
+
+Route::get('/about', function () {
+    return view('about', [
+        "nama" => "dita ratna sari" ,
+        "email" => "dita_21310009@stimata.ac.id" ,
+        "gambar" => "dita.jpg"
+    ]);
 });
-Route::get('/nim', function () {
-    return ('21.31.0009');
+
+Route::get('/Blog', function ()  {
+    return view('blog');
 });
+
